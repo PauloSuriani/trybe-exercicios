@@ -45,4 +45,6 @@ for (let i = 0; i < numbers.length - 1; i += 1){
   newNumbers.push(numbers[i] * numbers[i+1]);
 }
 
+newNumbers.push(numbers[numbers.length - 1] * 2);
+
 console.log(newNumbers);
