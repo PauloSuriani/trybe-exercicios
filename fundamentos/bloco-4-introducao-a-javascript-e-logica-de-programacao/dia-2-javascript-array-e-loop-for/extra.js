@@ -38,11 +38,14 @@ console.log(reverseNumbers);
 //  a multiplicação deverá ser feita por 2. Faça isso utilizando o for e o método push . 
 //  O resultado deve ser o array abaixo:
 
+// [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54]
+
 numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let newNumbers = [];
 
 for (let i = 0; i < numbers.length - 1; i += 1){
   newNumbers.push(numbers[i] * numbers[i+1]);
 }
+newNumbers.push(numbers[numbers.length - 1] * 2);
 
 console.log(newNumbers);
