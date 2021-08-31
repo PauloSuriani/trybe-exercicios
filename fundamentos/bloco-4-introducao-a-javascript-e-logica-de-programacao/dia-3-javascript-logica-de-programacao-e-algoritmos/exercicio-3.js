@@ -1,6 +1,6 @@
 //3- Agora inverta o lado do triângulo.
 
-let n = 8;
+let n = 4;
 let drawAux = '';
 
 for (let i = 0; i < n; i += 1){
