@@ -1,7 +1,6 @@
-let palavra = 'suco';
+let palavra = 'arara';
 
-
-verificaPalindrome(palavra);
+console.log(verificaPalindrome(palavra));
 
 function verificaPalindrome(palavra){
 
@@ -14,8 +13,6 @@ function verificaPalindrome(palavra){
   inverte = divide.reverse();
 
   junta = inverte.join("");
-
-  //return console.log(junta);
 
   if (palavra === junta){
     return true;
