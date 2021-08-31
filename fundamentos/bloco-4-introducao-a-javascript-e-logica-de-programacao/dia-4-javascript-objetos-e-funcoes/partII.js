@@ -1,11 +1,13 @@
 let palavra = 'suco';
-let divide = [];
-let inverte;
-let junta;
+
 
 verificaPalindrome(palavra);
 
 function verificaPalindrome(palavra){
+
+  let divide = [];
+  let inverte;
+  let junta;
 
   divide = palavra.split("");
 
@@ -98,37 +100,74 @@ maiorNome(nomes);
 // Valor esperado no retorno da função: 2 .
 
 let numerosArray = [2, 3, 2, 5, 8, 2, 3];
-
-let nro = {
-  numero,
-  repeticoes
-};
+let maisRepetido;
 
 function maisRepete(numeros){
 
+  let countAnt = 0;
   for (let i = 0; i < numeros.length; i += 1){
+
     let count = -1;
+
     for (let y = 0; y < numeros.length; y +=1){
 
       if (numeros [i] === numeros[y]){
         count += 1;
-
       }
     }
-    nro.numero = numeros[i];
-    nro.repeticoes = count;
+    if (countAnt < count){
+      maisRepetido = numeros[i];
+      countAnt = count;
+    }
   }
-
-  console.table(nro);
-
-  // let maior;
-  // for (let key in nro){
-  //   if (numeros[i] > numeros[i+1]){
-  //     maior = numeros[i];
-  //   }
-  // }
-
-
+  console.log(maisRepetido);
 }
 
 maisRepete(numerosArray);
+
+
+
+// 6 - Crie uma função que receba um número inteiro N e retorne o 
+//somatório de todos os números de 1 até N.
+// Valor de teste: N = 5 .
+// Valor esperado no retorno da função: 1+2+3+4+5 = 15 .
+
+let n = 5;
+
+function somaAteN(n){
+
+  let somatorio = 0;
+
+  for(let i = 0; i < n; i += 1){
+    somatorio += (n - i);
+  }
+
+  return (somatorio);
+}
+
+console.log(somaAteN(n));
+
+// 7 - Crie uma função que receba uma string word e outra string ending . 
+//Verifique se a string ending é o final da string word . 
+//Considere que a string ending sempre será menor que a string word .
+// Valor de teste: 'trybe' e 'be'
+// Valor esperado no retorno da função: true
+// verificaFimPalavra('trybe', 'be') ;
+// Retorno esperado: true
+// verificaFimPalavra('joaofernando', 'fernan') ;
+// Retorno esperado: false
+
+let word= 'trybe';
+let ending = 'be';
+
+verificaFimPalavra(word, ending);
+function verificaFimPalavra(word, ending){
+
+  let divideWord = word.split(ending);
+  if (divideWord[divideWord.length-1] === ''){
+    console.log("true");
+  } else console.log("false");
+
+}
+
+
