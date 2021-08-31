@@ -50,7 +50,7 @@ maiorIndice(teste);
 // Array de teste: [2, 4, 6, 7, 10, 0, -3]; .
 // Valor esperado no retorno da função: 6 .
 
-let teste = [2, 4, 6, 7, 10, 0, -3];
+let teste1 = [2, 4, 6, 7, 10, 0, -3];
 
 function menorIndice(numeros){
   let menor = teste[0];
@@ -68,7 +68,7 @@ function menorIndice(numeros){
   }
 }
 
-menorIndice(teste);
+menorIndice(teste1);
 
 
 // 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
@@ -92,3 +92,43 @@ function maiorNome(nomes){
 
 maiorNome(nomes);
 
+
+// 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+// Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
+// Valor esperado no retorno da função: 2 .
+
+let numerosArray = [2, 3, 2, 5, 8, 2, 3];
+
+let nro = {
+  numero,
+  repeticoes
+};
+
+function maisRepete(numeros){
+
+  for (let i = 0; i < numeros.length; i += 1){
+    let count = -1;
+    for (let y = 0; y < numeros.length; y +=1){
+
+      if (numeros [i] === numeros[y]){
+        count += 1;
+
+      }
+    }
+    nro.numero = numeros[i];
+    nro.repeticoes = count;
+  }
+
+  console.table(nro);
+
+  // let maior;
+  // for (let key in nro){
+  //   if (numeros[i] > numeros[i+1]){
+  //     maior = numeros[i];
+  //   }
+  // }
+
+
+}
+
+maisRepete(numerosArray);
