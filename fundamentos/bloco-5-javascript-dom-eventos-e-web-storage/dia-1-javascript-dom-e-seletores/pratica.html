@@ -44,10 +44,27 @@
     <script>
       function doisAnos() {
         let paragrafo = document.getElementsByTagName("p")[1];
-        paragrafo.innerHTML = 'Me vejo desenvolvendo softwares'
+        paragrafo.innerText = 'Me vejo desenvolvendo softwares';
       }
       doisAnos();
 
+      function praVerde() {
+        let quadrado = document.getElementsByClassName('main-content')[0];
+        quadrado.style.background = "rgb(76,164,109)";
+      }
+      praVerde();
+
+      function praBranco() {
+        let retangulo = document.getElementsByClassName('center-content')[0];
+        retangulo.style.background = 'white';
+      }
+      praBranco();
+
+      function corrigeText() {
+        let paragrafo = document.getElementsByTagName('h1')[0];
+        paragrafo.innerText = 'Exercício 5.1 - JavaScript';
+      }
+      corrigeText();
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
