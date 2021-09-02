@@ -61,10 +61,24 @@
       praBranco();
 
       function corrigeText() {
-        let paragrafo = document.getElementsByTagName('h1')[0];
-        paragrafo.innerText = 'Exercício 5.1 - JavaScript';
+        let titulo = document.getElementsByTagName('h1')[0];
+        titulo.innerText = 'Exercício 5.1 - JavaScript';
       }
       corrigeText();
+
+      function paragMaiusc() {
+        let paragrafo = document.getElementsByTagName('p')[0];
+        paragrafo.innerText = paragrafo.innerText.toUpperCase();
+      }
+      paragMaiusc();
+
+      function conteudoTagsConsole() {
+        let conteudo = document.getElementsByTagName('p');
+        for (let index = 0; index < conteudo.length; index += 1){
+          console.log(conteudo[index].innerText);
+        }
+      }
+      conteudoTagsConsole();
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
