@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+      function doisAnos() {
+        let paragrafo = document.getElementsByTagName("p")[1];
+        paragrafo.innerText = 'Me vejo desenvolvendo softwares';
+      }
+      doisAnos();
+
+      function praVerde() {
+        let quadrado = document.getElementsByClassName('main-content')[0];
+        quadrado.style.background = "rgb(76,164,109)";
+      }
+      praVerde();
+
+      function praBranco() {
+        let retangulo = document.getElementsByClassName('center-content')[0];
+        retangulo.style.background = 'white';
+      }
+      praBranco();
+
+      function corrigeText() {
+        let titulo = document.getElementsByTagName('h1')[0];
+        titulo.innerText = 'Exercício 5.1 - JavaScript';
+      }
+      corrigeText();
+
+      function paragMaiusc() {
+        let paragrafo = document.getElementsByTagName('p')[0];
+        paragrafo.innerText = paragrafo.innerText.toUpperCase();
+      }
+      paragMaiusc();
+
+      function conteudoTagsConsole() {
+        let conteudo = document.getElementsByTagName('p');
+        for (let index = 0; index < conteudo.length; index += 1){
+          console.log(conteudo[index].innerText);
+        }
+      }
+      conteudoTagsConsole();
+
+    </script>
+  </body>
+</html>
