@@ -16,7 +16,7 @@
         <section id="segundoEUltimoFilhoDoFilho"></section>
       </section>
       Atenção!
-      <section id="terceiroFilho">teste</section>
+      <section id="terceiroFilho"></section>
       <section id="quartoEUltimoFilho"></section>
     </section>
   
@@ -39,6 +39,25 @@
   const terceiroFilho1 = elementoOndeEstou.nextElementSibling;
   // Agora acesse o terceiroFilho a partir de pai .
   const terceiroFilho2 = pai.children[2];
+
+//   E a prática? Aqui!
+// Crie um irmão para elementoOndeVoceEsta .
+  const irmaoOndeVoceEsta = document.createElement('section');
+  irmaoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
+  pai.appendChild(irmaoOndeVoceEsta);
+// Crie um filho para elementoOndeVoceEsta .
+  const filhoOndeVoceEsta = document.createElement('section');
+  filhoOndeVoceEsta.id = 'filhoElementoOndeVoceEsta';
+  elementoOndeEstou.appendChild(filhoOndeVoceEsta);
+// Crie um filho para primeiroFilhoDoFilho .
+const filhoDoPrimeiroFilhoDoFilho = document.createElement('section');
+filhoDoPrimeiroFilhoDoFilho.id = 'neto';
+primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilhoDoFilho);
+// A partir desse filho criado, acesse terceiroFilho .
+const tercFilho = filhoDoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
+
+
+
     </script>
   </main>
 
