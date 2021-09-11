@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Pixels Art</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho">teste</section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  
+    <script>
+  // Acesse o elemento elementoOndeVoceEsta .
+  const elementoOndeEstou = document.getElementById('elementoOndeVoceEsta');
+  // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+  const pai = elementoOndeEstou.parentElement;
+  pai.style.color = 'blue';
+  // Acesse o primeiroFilhoDoFilho e adicione um texto a ele. 
+  const primeiroFilhoDoFilho = elementoOndeEstou.firstElementChild;
+  primeiroFilhoDoFilho.innerHTML = 'Elemento primeiro filho do filho';
+  // Acesse o primeiroFilho a partir de pai .
+  const primeiroFilho1 = pai.firstElementChild;
+  // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+  const primeiroFilho2 = elementoOndeEstou.previousElementSibling;
+  // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+  const atencao = elementoOndeEstou.nextSibling;
+  // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+  const terceiroFilho1 = elementoOndeEstou.nextElementSibling;
+  // Agora acesse o terceiroFilho a partir de pai .
+  const terceiroFilho2 = pai.children[2];
+    </script>
+  </main>
+
+</body>
