@@ -57,17 +57,33 @@ const tercFilho = filhoDoPrimeiroFilhoDoFilho.parentElement.parentElement.nextEl
 
 // parte III
 // Remova todos os elementos filhos de paiDoPai exceto pai ,
-// elementoOndeVoceEsta e primeiroFilhoDoFilho .
+// elementoOndeVoceEsta e primeiroFilhoDoFilho 
 
-let str = 'elementoOndeVoceEsta primeiroFilhodoFilho';
-for (let i = 0; i < pai.childNodes.length; i += 1) {
-  let elemento = pai.childNodes[i];
-  elemento.classList.add('testes');
+pai.removeChild(pai.lastChild);
+pai.removeChild(pai.lastChild);
+pai.removeChild(pai.lastChild);
+pai.removeChild(pai.lastChild);
+pai.removeChild(pai.lastChild);
+pai.removeChild(pai.lastChild);
+pai.removeChild(pai.children[0]);
+elementoOndeEstou.removeChild(elementoOndeEstou.lastChild);
+elementoOndeEstou.removeChild(elementoOndeEstou.lastChild);
+elementoOndeEstou.removeChild(elementoOndeEstou.lastChild);
 
-  if (elemento.id.includes(str) ) {
-    pai.removeChild(pai.childNodes[i]);
-  }
-}
+// algorítimo que não deu certo:
+// const paiDoPai = document.getElementById('paiDoPai');
+// for (let i = 0; i < paiDoPai.children.length; i += 1) {
+//   let elemento = paiDoPai.children[i];
+//   elemento.classList.add('testes');
+
+//   if (! elemento.id.includes('pai') ) {
+//     paiDoPai.removeChild(paiDoPai.children[i]);
+//   } else if (! elemento.id.includes('elementoOndeVoceEsta') ) {
+//     paiDoPai.removeChild(paiDoPai.children[i]);
+//   } else if (! elemento.id.includes('primeiroFilhodoFilho') ) {
+//     paiDoPai.removeChild(paiDoPai.children[i]);
+//   }
+// }
 
     </script>
   </main>
