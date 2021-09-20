@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[course] 6.1</title>
+  <title>[prática course] 6.2</title>
 
   <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
@@ -20,61 +20,79 @@ crossorigin="anonymous">
 
 <form>
 
-  <fieldset>
-    <div class="container">
-      <label for="nome" class="form-label">Nome: </label>
-      <input type="text" class="form-control" name="nome" id="nome" required maxlength="40"/>
-    </div>
+  <div class="container">
+    <label for="nome" class="form-label">Nome: </label>
+    <input type="text" class="form-control" name="nome" id="nome" required maxlength="40"/>
+  </div>
 
-    <div class="container">
-      <label for="e-mail" class="form-label">E-mail: </label>
-      <input type="text" name="e-mail" id="e-mail" maxlength="50" required/>
-    </div>
+  <div class="container">
+    <label for="e-mail" class="form-label">E-mail: </label>
+    <input type="text" class="form-control" placeholder="marcopaulo@exemplo.com" name="e-mail" id="e-mail" maxlength="50" required/>
+  </div>
 
-    <div class="container">
-      <label for="cpf" class="form-label">CPF: </label>
-      <input type="text" name="cpf" maxlength="11" id="cpf" required>
-    </div>
+  <div class="container">
+    <label for="cpf" class="form-label">CPF: </label>
+    <input type="text" class="form-control" name="cpf" maxlength="11" id="cpf" required>
+  </div>
 
+  <div class="container">
     <label for="endereco" class="form-label">Endereço: </label>
-    <input type="text" name="endereco" maxlength="200" id="endereco" required>
+    <input type="text" class="form-control" name="endereco" maxlength="200" id="endereco" required>
+  </div>
 
+  <div class="container">
     <label for="cidade" class="form-label">Cidade: </label>
-    <input type="text" name="cidade" maxlength="28" id="cidade" required>
+    <input type="text" class="form-control" name="cidade" maxlength="28" id="cidade" required>
+  </div>
 
+  <div class="container">
     <label for="estado">Estado: </label>
-    <select name="estado" id="selec-estado" required></select>
+    <select name="estado" class="form-select" id="selec-estado" required>
+      <option selected>Selecione seu Estado</option>
+    </select>
+  </div>
 
-    <div id="radio-button">
-      <label for="tipo">Tipo: </label>
+
+  <div id="radio-button" class="container">
+    <label for="tipo" class="form-check-label">Tipo: </label>
+    <div class="form-check">
       <input class="form-check-input" type="radio" name="tipo" id="casa" value="Casa">
-      <label for="casa">Casa</label>
-      <input type="radio" name="tipo" id="ap" value="Apartamento">
-      <label for="ap">Apartamento</label>
+      <label for="casa" class="form-check-label">Casa</label>
     </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="tipo" id="ap" value="Apartamento">
+      <label for="ap" class="form-check-label">Apartamento</label>
+    </div>
+  </div>
+ 
 
-  </fieldset>
 
-  <fieldset>
+  <div class="container">
+    <label class="form-label" for="res-curriculo">Resumo do currículo: </label>
+    <textarea class="form-control" name="res-curriculo" maxlength="1000" required></textarea>
+  </div>
 
-    <label for="res-curriculo">Resumo do currículo: </label>
-    <textarea name="res-curriculo" maxlength="1000" required></textarea>
-
+  <div class="container">
     <label for="cargo" class="form-label">Cargo: </label>
-    <input type="text" name="cargo" maxlength="40" required>
+    <input type="text" class="form-control" name="cargo" maxlength="40" required>
+  </div>
 
+  <div class="container">
     <label for="desc-cargo" class="form-label">Descrição do cargo: </label>
-    <input type="text" name="desc-cargo" maxlength="500" required>
+    <input type="text" class="form-control" name="desc-cargo" maxlength="500" required>
+  </div>
 
+  <div class="container">
     <label for="data-inicial" class="form-label">Data Inicial: </label>
-    <input type="text" id="data" name="data-inicial" required>
+    <input type="text" class="form-control" id="data" name="data-inicial" required>
+  </div>
 
-  </fieldset>
+  <div class="container">
+    <button class="btn btn-success" type="submit" id="buttonSubmit">Enviar</button>
+    <button class="btn btn-warning" type="reset">Limpar</button>
+  </div>
 
-  <button type="submit" id="buttonSubmit">Enviar</button>
-  <button type="reset">Limpar</button>
-
-  <div id="consolidado"></div>
+  <div class="container" id="consolidado"></div>
 
 </form>
  
