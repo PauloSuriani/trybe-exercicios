@@ -24,87 +24,89 @@ crossorigin="anonymous">
     <p class="lead"><em>Alavanque sua carreira</em></p>
   </header>
 
-<form class="container">
+  <form class="container">
 
-  <div class="mb-3">
-    <label for="nome" class="form-label">Nome</label>
-    <input type="text" class="form-control" name="nome" id="nome" required maxlength="40"/>
-  </div>
-
-  <div class="mb-3">
-    <label for="e-mail" class="form-label">E-mail</label>
-    <input type="text" class="form-control" placeholder="marcopaulo@exemplo.com" name="e-mail" id="e-mail" maxlength="50" required/>
-  </div>
-
-  <div class="mb-3">
-    <label for="cpf" class="form-label">CPF</label>
-    <input type="text" class="form-control" name="cpf" maxlength="11" id="cpf" required>
-  </div>
-
-  <div class="mb-3">
-    <label for="endereco" class="form-label">Endereço</label>
-    <input type="text" class="form-control" name="endereco" maxlength="200" id="endereco" required>
-  </div>
-
-  <div class="mb-3">
-    <label for="cidade" class="form-label">Cidade</label>
-    <input type="text" class="form-control" name="cidade" maxlength="28" id="cidade" required>
-  </div>
-
-  <div class="mb-3">
-    <label class="form-label" for="estado">Estado</label>
-    <select name="estado" class="form-select" id="selec-estado" required>
-      <option selected>Selecione seu Estado</option>
-    </select>
-  </div>
-
-
-  <div id="radio-button" class="mb-3">
-    <label for="tipo" class="form-check-label">Tipo</label>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="tipo" id="casa" value="Casa">
-      <label for="casa" class="form-check-label">Casa</label>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nome</label>
+      <input data-validate-field="name" type="text" class="form-control" name="name" id="name" maxlength="40"/>
     </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="tipo" id="ap" value="Apartamento">
-      <label for="ap" class="form-check-label">Apartamento</label>
+
+    <div class="mb-3">
+      <label for="e-mail" class="form-label">E-mail</label>
+      <input type="text" class="form-control" placeholder="marcopaulo@exemplo.com" name="e-mail" id="e-mail" maxlength="50" required/>
     </div>
-  </div>
- 
+
+    <div class="mb-3">
+      <label for="cpf" class="form-label">CPF</label>
+      <input type="text" class="form-control" name="cpf" maxlength="11" id="cpf" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="endereco" class="form-label">Endereço</label>
+      <input type="text" class="form-control" name="endereco" maxlength="200" id="endereco" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="cidade" class="form-label">Cidade</label>
+      <input type="text" class="form-control" name="cidade" maxlength="28" id="cidade" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="estado">Estado</label>
+      <select name="estado" class="form-select" id="selec-estado" required>
+        <option selected>Selecione seu Estado</option>
+      </select>
+    </div>
 
 
-  <div class="mb-3">
-    <label class="form-label" for="res-curriculo">Resumo do currículo</label>
-    <textarea class="form-control" name="res-curriculo" maxlength="1000" required></textarea>
-  </div>
+    <div id="radio-button" class="mb-3">
+      <label for="tipo" class="form-check-label">Tipo</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tipo" id="casa" value="Casa">
+        <label for="casa" class="form-check-label">Casa</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tipo" id="ap" value="Apartamento">
+        <label for="ap" class="form-check-label">Apartamento</label>
+      </div>
+    </div>
+  
 
-  <div class="mb-3">
-    <label for="cargo" class="form-label">Cargo</label>
-    <input type="text" class="form-control" name="cargo" maxlength="40" required>
-  </div>
 
-  <div class="mb-3">
-    <label for="desc-cargo" class="form-label">Descrição do cargo</label>
-    <input type="text" class="form-control" name="desc-cargo" maxlength="500" required>
-  </div>
+    <div class="mb-3">
+      <label class="form-label" for="res-curriculo">Resumo do currículo</label>
+      <textarea class="form-control" name="res-curriculo" maxlength="1000" required></textarea>
+    </div>
 
-  <!-- data -->
-  <div class="mb-3">
-    <label for="data-inicial" class="form-label">Data Inicial</label>
-    <input class="form-control" type="text"  id="datepicker" name="data-inicial" required>
-  </div>
+    <div class="mb-3">
+      <label for="cargo" class="form-label">Cargo</label>
+      <input type="text" class="form-control" name="cargo" maxlength="40" required>
+    </div>
 
-  <div class="mb-3">
-    <button class="btn btn-primary" type="submit" id="buttonSubmit">Enviar</button>
-    <button class="btn btn-secondary" type="reset">Limpar</button>
-  </div>
+    <div class="mb-3">
+      <label for="desc-cargo" class="form-label">Descrição do cargo</label>
+      <input type="text" class="form-control" name="desc-cargo" maxlength="500" required>
+    </div>
 
-  <div class="mb-3" id="consolidado"></div>
+    <!-- data -->
+    <div class="mb-3">
+      <label for="data-inicial" class="form-label">Data Inicial</label>
+      <input class="form-control" type="text"  id="datepicker" name="data-inicial" required>
+    </div>
 
-</form>
+    <div class="mb-3">
+      <button class="btn btn-primary" type="submit" id="buttonSubmit">Enviar</button>
+      <button class="btn btn-secondary" type="reset">Limpar</button>
+    </div>
+
+    <div class="mb-3" id="consolidado"></div>
+
+  </form>
  
   <script src="script.js"></script>
   <script src="pikaday.js"></script>
+  <script src="just-validate.min.js"></script>
+
   
 </body>
 </html>
