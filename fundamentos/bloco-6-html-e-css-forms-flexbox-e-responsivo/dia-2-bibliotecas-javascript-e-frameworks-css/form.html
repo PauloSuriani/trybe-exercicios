@@ -10,6 +10,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
 rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
 crossorigin="anonymous">
+
+ <!-- pikaday -->
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
+
 </head>
 <body>
 
@@ -18,43 +24,43 @@ crossorigin="anonymous">
     <p class="lead"><em>Alavanque sua carreira</em></p>
   </header>
 
-<form>
+<form class="container">
 
-  <div class="container">
-    <label for="nome" class="form-label">Nome: </label>
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
     <input type="text" class="form-control" name="nome" id="nome" required maxlength="40"/>
   </div>
 
-  <div class="container">
-    <label for="e-mail" class="form-label">E-mail: </label>
+  <div class="mb-3">
+    <label for="e-mail" class="form-label">E-mail</label>
     <input type="text" class="form-control" placeholder="marcopaulo@exemplo.com" name="e-mail" id="e-mail" maxlength="50" required/>
   </div>
 
-  <div class="container">
-    <label for="cpf" class="form-label">CPF: </label>
+  <div class="mb-3">
+    <label for="cpf" class="form-label">CPF</label>
     <input type="text" class="form-control" name="cpf" maxlength="11" id="cpf" required>
   </div>
 
-  <div class="container">
-    <label for="endereco" class="form-label">Endereço: </label>
+  <div class="mb-3">
+    <label for="endereco" class="form-label">Endereço</label>
     <input type="text" class="form-control" name="endereco" maxlength="200" id="endereco" required>
   </div>
 
-  <div class="container">
-    <label for="cidade" class="form-label">Cidade: </label>
+  <div class="mb-3">
+    <label for="cidade" class="form-label">Cidade</label>
     <input type="text" class="form-control" name="cidade" maxlength="28" id="cidade" required>
   </div>
 
-  <div class="container">
-    <label for="estado">Estado: </label>
+  <div class="mb-3">
+    <label class="form-label" for="estado">Estado</label>
     <select name="estado" class="form-select" id="selec-estado" required>
       <option selected>Selecione seu Estado</option>
     </select>
   </div>
 
 
-  <div id="radio-button" class="container">
-    <label for="tipo" class="form-check-label">Tipo: </label>
+  <div id="radio-button" class="mb-3">
+    <label for="tipo" class="form-check-label">Tipo</label>
     <div class="form-check">
       <input class="form-check-input" type="radio" name="tipo" id="casa" value="Casa">
       <label for="casa" class="form-check-label">Casa</label>
@@ -67,35 +73,38 @@ crossorigin="anonymous">
  
 
 
-  <div class="container">
-    <label class="form-label" for="res-curriculo">Resumo do currículo: </label>
+  <div class="mb-3">
+    <label class="form-label" for="res-curriculo">Resumo do currículo</label>
     <textarea class="form-control" name="res-curriculo" maxlength="1000" required></textarea>
   </div>
 
-  <div class="container">
-    <label for="cargo" class="form-label">Cargo: </label>
+  <div class="mb-3">
+    <label for="cargo" class="form-label">Cargo</label>
     <input type="text" class="form-control" name="cargo" maxlength="40" required>
   </div>
 
-  <div class="container">
-    <label for="desc-cargo" class="form-label">Descrição do cargo: </label>
+  <div class="mb-3">
+    <label for="desc-cargo" class="form-label">Descrição do cargo</label>
     <input type="text" class="form-control" name="desc-cargo" maxlength="500" required>
   </div>
 
-  <div class="container">
-    <label for="data-inicial" class="form-label">Data Inicial: </label>
-    <input type="text" class="form-control" id="data" name="data-inicial" required>
+  <!-- data -->
+  <div class="mb-3">
+    <label for="data-inicial" class="form-label">Data Inicial</label>
+    <input class="form-control" type="text"  id="datepicker" name="data-inicial" required>
   </div>
 
-  <div class="container">
-    <button class="btn btn-success" type="submit" id="buttonSubmit">Enviar</button>
-    <button class="btn btn-warning" type="reset">Limpar</button>
+  <div class="mb-3">
+    <button class="btn btn-primary" type="submit" id="buttonSubmit">Enviar</button>
+    <button class="btn btn-secondary" type="reset">Limpar</button>
   </div>
 
-  <div class="container" id="consolidado"></div>
+  <div class="mb-3" id="consolidado"></div>
 
 </form>
  
   <script src="script.js"></script>
+  <script src="pikaday.js"></script>
+  
 </body>
 </html>

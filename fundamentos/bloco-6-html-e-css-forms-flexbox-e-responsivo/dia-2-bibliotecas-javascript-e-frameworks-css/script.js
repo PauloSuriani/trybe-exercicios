@@ -18,36 +18,6 @@ selectEstados();
 
 let alerta = '';
 
-function verificaData() {
-  const elemData = document.getElementById('data');
-  let data = elemData.value;
-  let dataFormatada = data.split('/');
-  if(dataFormatada.length != 3){
-    alerta = 'Formato de data inválido!'
-    alert(alerta);
-  } else if (parseInt(dataFormatada[0]) >= 1 && parseInt(dataFormatada[0]) <= 31 ){ // dia
-    if (parseInt(dataFormatada[1]) >= 1 && parseInt(dataFormatada[1]) <= 12) {      // mês
-      if (parseInt(dataFormatada[2]) >= 0){
-        alerta = '';
-        return true;
-      } else {
-        alerta = 'O Ano informado é inválido!';
-        alert(alerta);
-        return false;
-      }
-    }else {
-      alerta = 'O Mês informado é inválido!';
-      alert(alerta);
-      return false;
-    }
-  } else {
-    alerta = 'O Dia informado é inválido!';
-    alert(alerta);
-    return false;
-  }
-
-}
-
 const enviar = document.getElementById('buttonSubmit');
 
 const campos = ['nome', 'e-mail', 'cpf', 'endereco', 'cidade', 'selec-estado'];
@@ -74,9 +44,11 @@ function consolidaTextoFracasso() {
 function realizaVerificacoes(event) {
 
   event.preventDefault();
-  let ehDataValida = verificaData();
-  if (ehDataValida) consolidaTextoSucesso();
-  else consolidaTextoFracasso();
+ consolidaTextoSucesso();
+
 }
 
 enviar.addEventListener('click', realizaVerificacoes);
+
+window.onload() = document.getElementById('data').DatePickerX.init();
+
