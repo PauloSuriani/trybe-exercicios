@@ -10,3 +10,10 @@ const testingScope = (escopo) => {
 }
 
 testingScope(true);
+
+// exercício 02 - parte I
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+const ordernados = oddsAndEvens.sort((oddsAndEvens, ordernados) => oddsAndEvens - ordernados);
+
+console.log(`Os números ${ordernados} se encontram odernados de forma crescente`); // será necessário alterar essa linha 😉
