@@ -24,7 +24,7 @@ console.log(`Os números ${ordernados} se encontram odernados de forma crescente
 
 
 // parte II
-// // exercício 01 - fatorial
+// exercício 01 - fatorial
 
 const fatorial = (n) => {
   let somas = n * (n - 1);
@@ -38,3 +38,17 @@ const fatorial = (n) => {
   return somas;
 }
 console.log(fatorial(4));
+
+// exercício 02 - biggest word
+
+const longestWord = (frase) => {
+  let palavras = frase.split(' ');
+  let nroPalavras = palavras.length - 1;
+  let maiorPalavra = '';
+  for (let i = 0; i < nroPalavras; i += 1) {
+    (palavras[i].length > palavras[i+1].length) ? maiorPalavra = palavras[i] : maiorPalavra = palavras[i+1];
+  }
+  return(maiorPalavra);
+
+}
+console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu")); // retorna 'aconteceu
