@@ -52,3 +52,14 @@ const longestWord = (frase) => {
 
 }
 console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu")); // retorna 'aconteceu
+
+// exercício 03 - contador de cliques
+
+const btnClick = document.getElementById('btn-click');
+const contador = document.getElementById('contador');
+let clickCount = 0;
+
+window.onload = () => {btnClick.addEventListener('click', () => {
+  clickCount += 1;
+  contador.innerText = clickCount;
+});}
