@@ -78,4 +78,16 @@ const substitui = (str) => {
   return novaStr.join('');
 }
 
-console.log(substitui('PAULÃO'));
+const frase = substitui('PAULÃO');
+
+const funcao = (frase) => {
+  sortedSkills = skills.sort();
+  return `${frase} Minhas cinco principais habilidades são:
+          ${sortedSkills[0]}
+          ${sortedSkills[1]}
+          ${sortedSkills[2]}
+          ${sortedSkills[3]}
+          ${sortedSkills[4]}`;
+}
+
+console.log(funcao(frase));
