@@ -39,6 +39,10 @@ const fatorial = (n) => {
 }
 console.log(fatorial(4));
 
+// recursivo
+const recFatorial = (n) => n > 1 ? n * recFatorial(n - 1) : 1;
+console.log(recFatorial(4));
+
 // exercício 02 - biggest word
 
 const longestWord = (frase) => {
@@ -78,8 +82,6 @@ const substitui = (str) => {
   return novaStr.join('');
 }
 
-const frase = substitui('PAULÃO');
-
 const funcao = (frase) => {
   sortedSkills = skills.sort();
   return `${frase} Minhas cinco principais habilidades são:
@@ -90,4 +92,4 @@ const funcao = (frase) => {
           ${sortedSkills[4]}`;
 }
 
-console.log(funcao(frase));
+console.log(funcao(substitui('PAULAO')));
