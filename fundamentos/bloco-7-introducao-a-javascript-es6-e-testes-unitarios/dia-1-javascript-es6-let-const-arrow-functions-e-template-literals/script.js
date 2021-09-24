@@ -63,3 +63,19 @@ window.onload = () => {btnClick.addEventListener('click', () => {
   clickCount += 1;
   contador.innerText = clickCount;
 });}
+
+// exercício 04 - 
+
+const skills = ['JavaScript', 'CSS', 'HTML', 'Bootstrap', 'SQL'];
+
+const substitui = (str) => {
+  
+  let exemplo = 'Tryber x aqui!';
+  let novaStr = exemplo.split('');
+  for (let i = 0; i < exemplo.length; i += 1) {
+    novaStr[i] === 'x' ? novaStr[i] = str : '' ;
+  }
+  return novaStr.join('');
+}
+
+console.log(substitui('PAULÃO'));
