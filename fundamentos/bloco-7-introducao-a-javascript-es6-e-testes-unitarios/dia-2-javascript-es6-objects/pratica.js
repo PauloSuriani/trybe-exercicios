@@ -100,6 +100,10 @@ console.log(chaves(lesson3));
 console.log((`chaves> ${chaves(lesson3)}`));
 
 // Crie uma função para mostrar o tamanho de um objeto.
+const tamanho = (objeto) => Object.keys(objeto).length;
+
+console.log(tamanho(lesson3));
+
 // Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
 // Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . 
 // Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3 .
