@@ -94,6 +94,10 @@ const turnoLesson2 = (licao) => licao.turno = 'noite';
 console.log(turnoLesson2(lesson2));
 
 // Crie uma função para listar as keys de um objeto. Essa função deve receber um objeto como parâmetro.
+const chaves = (objeto) => Object.keys(objeto);
+
+console.log(chaves(lesson3));
+console.log((`chaves> ${chaves(lesson3)}`));
 
 // Crie uma função para mostrar o tamanho de um objeto.
 // Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
