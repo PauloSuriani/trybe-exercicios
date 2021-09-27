@@ -131,3 +131,12 @@ function studentCount(objLesson) {
 // console.log(Object.keys(allLessons));
 console.log(studentCount(allLessons));
 
+
+// Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
+
+function getValueByNumber(lesson, position) {
+  return Object.values(lesson)[position];
+}
+
+console.log(getValueByNumber(lesson1, 0));
+// Output: 'Matématica'
