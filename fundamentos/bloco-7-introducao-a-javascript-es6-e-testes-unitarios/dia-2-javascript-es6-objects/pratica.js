@@ -34,7 +34,7 @@ const order = {
   },
 };
 
-console.log( Object.keys(order.order.pizza));
+console.log(Object.keys(order.order.pizza));
 
 // Complete a função customerInfo() para que seu retorno seja similar a 
 // "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
@@ -54,7 +54,7 @@ const orderModifier = (order) => {
   let preco2 = order.order.pizza.pepperoni.price;
   let precoRefri = order.order.drinks.coke.price;
   order.payment.total = preco1 + preco2 + precoRefri;
-  
+
   return (`Olá ${order.name}, o total do seu pedido de ${pedido[0]}, ${pedido[1]} e ${refri} é R$${order.payment.total},00.`);
 
 }
@@ -122,7 +122,7 @@ console.log(allLessons);
 
 function studentCount(objLesson) {
   let studentSum = 0;
-  for (let index = 0; index < Object.keys(objLesson).length; index += 1){
+  for (let index = 0; index < Object.keys(objLesson).length; index += 1) {
     studentSum += objLesson[Object.keys(objLesson)[index]].numeroEstudantes;
   }
   return studentSum;
@@ -148,7 +148,7 @@ const verifyPair = (lesson, keyName, keyValue) => {
   const names = Object.keys(lesson);
   const values = Object.values(lesson);
   for (let i = 0; i < names.length; i += 1) {
-    if(names[i] === keyName && values[i] === keyValue) {
+    if (names[i] === keyName && values[i] === keyValue) {
       return true;
     }
   }
@@ -165,7 +165,7 @@ console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
 const mathStudents = (allLessons) => {
   let mathStudents = 0;
-  for(let i = 0; i < Object.keys(allLessons).length; i += 1){
+  for (let i = 0; i < Object.keys(allLessons).length; i += 1) {
     if (allLessons[Object.keys(allLessons)[i]].materia === 'Matemática') {
       mathStudents += allLessons[Object.keys(allLessons)[i]].numeroEstudantes;
     }
@@ -177,3 +177,29 @@ console.log(mathStudents(allLessons));
 
 // Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora,
 // as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
+
+function createReport(lessons, profName) {
+  let report = {
+    professor: profName,
+  };
+  let aulas = [];
+  let studentCounter = 0;
+  for (let i = 0; i < Object.keys(lessons).length; i += 1) {
+    if (lessons[Object.keys(lessons)[i]].professor === profName) {
+      aulas.push(lessons[Object.keys(lessons)[i]].materia);      
+      studentCounter += (lessons[Object.keys(lessons)[i]].numeroEstudantes);
+
+      // Object.assign(report, );
+      // mathStudents += lessons[Object.keys(lessons)[i]].numeroEstudantes;
+    }
+  }
+  report['aulas'] = aulas;
+  report['estudantes'] = studentCounter;
+  return report;
+}
+  console.log(createReport(allLessons, 'Maria Clara'));
+/* {
+  professor: 'Maria Clara',
+  aulas: [ 'Matemática', 'Matemática' ],
+  estudantes: 30
+} */
