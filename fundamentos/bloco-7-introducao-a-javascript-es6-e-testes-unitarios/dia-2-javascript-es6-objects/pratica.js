@@ -122,8 +122,8 @@ console.log(allLessons);
 
 function studentCount(objLesson) {
   let studentSum = 0;
-  for (let index = 0; index < 3; index += 1){
-    studentSum += objLesson[Object.keys(allLessons)[index]].numeroEstudantes;
+  for (let index = 0; index < Object.keys(objLesson).length; index += 1){
+    studentSum += objLesson[Object.keys(objLesson)[index]].numeroEstudantes;
   }
   return studentSum;
 }
@@ -159,3 +159,21 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
+
+
+// Bônus
+// Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+const mathStudents = (allLessons) => {
+  let mathStudents = 0;
+  for(let i = 0; i < Object.keys(allLessons).length; i += 1){
+    if (allLessons[Object.keys(allLessons)[i]].materia === 'Matemática') {
+      mathStudents += allLessons[Object.keys(allLessons)[i]].numeroEstudantes;
+    }
+  }
+  return mathStudents;
+}
+
+console.log(mathStudents(allLessons));
+
+// Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora,
+// as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
