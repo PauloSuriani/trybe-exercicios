@@ -61,3 +61,22 @@ const foiSorteado = (nroApostado, nroSorteado) => {
 
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const checkAnswers = (respostasCertas, respostasEstudante, callback) => {
+  const result = callback(respostasCertas, respostasEstudante);
+  return result;
+};
+
+const countRightAnswers = (gabarito, respostas) => {
+  let count = 0;
+  for (let i = 0; i < gabarito.length; i += 1) {
+    if (respostas[i] !== 'N.A'){
+      if (gabarito[i] === respostas[i]) {
+        count += 1;
+      } else count -= 0.5;
+    }
+  }
+  return count;
+};
+
+// console.log(checkAnswers(RIGHT_ANSWERS, STUDENT_ANSWERS, countRightAnswers));
