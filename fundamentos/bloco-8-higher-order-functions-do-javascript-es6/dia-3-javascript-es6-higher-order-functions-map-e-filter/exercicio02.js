@@ -96,24 +96,14 @@ const expectedResult = [
 
 function nameAndAge() {
   const authorsOrderedByAge = books.map(book => {
-    
     return {
       age: `${book.releaseYear - book.author.birthYear}`,
       author: `${book.author.name}`,
     };
   });
-  authorsOrderedByAge.sort((a, b) => {
-    if ( a.age < b.age ){
-      return -1;
-    }
-    if ( a.age > b.age ){
-      return 1;
-    }
-    return 0;
-  });
+  authorsOrderedByAge.sort((a, b) => a.age > b.age && 1 || -1);
   return authorsOrderedByAge;
 }
-
 console.log(nameAndAge());
 
 // Referência para construção função sort()
