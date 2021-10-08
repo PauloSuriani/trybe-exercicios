@@ -8,9 +8,15 @@ const arrays = [
 
 function flatten() {
   let novoArray = [];
-  const matrixToArray = arrays.reduce((accumulator, currentValue, index) => {
-    accumulator = accumulator.push.call(this, currentValue);
+  let arrayAux = [];
+  const matrixToArray = arrays.reduce((accumulator, currentValue) => {
+    accumulator = currentValue.reduce((acc, crr) => {
+      acc.push(crr);
+      return acc;
+    }, arrayAux);
     return accumulator; 
   }, novoArray);
   return matrixToArray;
 }
+
+console.log(flatten());
