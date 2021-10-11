@@ -77,3 +77,18 @@ function authorBornIn1947() {
 }
 
 console.log(authorBornIn1947());
+
+// 2 - Retorne o nome do livro de menor nome.
+// Dica: use a função forEach .
+
+function smallerName() {
+  let nameBook = books[0].name;
+  books.forEach((book) => {
+    if (nameBook.length > book.name.length) {
+      nameBook = book.name;
+    }
+  });
+  return nameBook;
+}
+
+console.log(smallerName());
