@@ -192,3 +192,17 @@ function someBookWasReleaseOnThe80s() {
 }
 
 console.log(someBookWasReleaseOnThe80s());
+
+// 7 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, 
+// e false , caso contrário.
+
+const expectedResult4 = false;
+
+function authorUnique() {
+  return books.every((book1) => 
+    !books.some((book2) => 
+     (book1.author.birthYear === book2.author.birthYear) 
+     && (book1.author.name !== book2.author.name))); 
+}
+
+console.log(authorUnique());
