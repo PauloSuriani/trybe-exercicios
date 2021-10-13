@@ -114,3 +114,28 @@ function averageAge() {
 }
 
 console.log(averageAge());
+
+// 4 - Encontre o livro com o maior nome.
+
+const expectedResult3 = {
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  genre: 'Fantasia',
+  author: {
+    name: 'George R. R. Martin',
+    birthYear: 1948,
+  },
+  releaseYear: 1991,
+}
+
+function longestNamedBook() {
+  const maiorNome = books.reduce((acc, book) => {
+    if (acc.name.length > book.name.length) {
+      return acc;
+    }
+    return book;
+  });
+  return maiorNome;
+}
+
+console.table(longestNamedBook());
