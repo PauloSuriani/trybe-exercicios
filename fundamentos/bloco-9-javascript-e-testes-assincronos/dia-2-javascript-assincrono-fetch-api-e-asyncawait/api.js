@@ -4,8 +4,12 @@ const coinCapFetch = async () => {
   const url = `https://api.coincap.io/v2/assets`;
   return fetch(url)
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((result) => result.data)
     .catch((error) => `something went wrong: ${error}`);
 }
 
-coinCapFetch();
+const getCoinsArray = async () => {
+  const fetchResult = await coinCapFetch();
+}
+
+getCoinsArray();
