@@ -26,12 +26,16 @@ class Content extends React.Component {
     ];
 
     return (
-      <li>{conteudos.map((conteudo) => 
-        `O conteúdo é: ${conteudo.conteudo}
-        Status: ${conteudo.status}
-        Bloco: ${conteudo.bloco}`)}
-      </li>
-    )
+      <div>
+        {conteudos.map((conteudo) => (
+          <div key={conteudo.conteudo}>
+            <h3>{`O conteúdo é: ${conteudo.conteudo}`}</h3>
+            <p>{`Status: ${conteudo.status}`}</p>
+            <p>{`Bloco: ${conteudo.bloco}`}</p> 
+          </div>
+          ))}
+      </div>
+    );
   }
 }
 
