@@ -15,7 +15,7 @@ class Pokemon extends React.Component {
         <p>{ type }</p>
         <p>{ value }</p>
         <p>{ measurementUnit }</p>
-        <p>{ image }</p>
+        <img src={ image } />
       </div>
 
     );
