@@ -10,13 +10,11 @@ class Pokemon extends React.Component {
     const { measurementUnit } = this.props;
     const { image } = this.props;
     return(
-      <div>
+      <div className="poke-card">
         <img src={ image } />
-        <p>{ name }</p>
-        <p>{ type }</p>
-        <p>{ value }</p>
-        <p>{ measurementUnit }</p>
-        
+        <p>{ `Nome: ${name}` }</p>
+        <p>{ `Tipo: ${type}` }</p>
+        <p>{ value }{ measurementUnit }</p>
       </div>
 
     );
