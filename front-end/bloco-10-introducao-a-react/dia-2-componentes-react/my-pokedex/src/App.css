@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding: 20px;
 }
 
 .App-logo {
@@ -7,10 +8,21 @@
   pointer-events: none;
 }
 
-.poke-weight {
+.poke-dex {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.poke-card {
+  border-radius: 8px;
+  padding: 15px;
+  border-color: black;
+  background-color: gray;
   align-items: center;
+  color: aliceblue;
+  box-shadow: 5px 5px 5px black;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
