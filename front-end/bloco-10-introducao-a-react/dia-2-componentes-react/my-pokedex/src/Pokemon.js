@@ -11,11 +11,12 @@ class Pokemon extends React.Component {
     const { image } = this.props;
     return(
       <div>
+        <img src={ image } />
         <p>{ name }</p>
         <p>{ type }</p>
         <p>{ value }</p>
         <p>{ measurementUnit }</p>
-        <img src={ image } />
+        
       </div>
 
     );
